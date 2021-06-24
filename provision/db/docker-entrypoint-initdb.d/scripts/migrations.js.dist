@@ -1,0 +1,16 @@
+db = db.getSiblingDB('pa-storage');
+
+try {
+    db.createUser({
+      user: "api",
+      pwd: "{{db-pswd}}",
+      roles: [ "readWrite" ]
+    });
+} catch(err) {
+    print(err.message);
+}
+
+db.createCollection('items');
+db.createCollection('users');
+db.createCollection('user-types');
+db.createCollection('storages');
