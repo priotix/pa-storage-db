@@ -1,4 +1,4 @@
-db = db.getSiblingDB('pa-storage');
+db = db.getSiblingDB('api-storage');
 
 try {
     db.createUser({

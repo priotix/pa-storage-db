@@ -1,6 +1,6 @@
 #!/bin/bash
 
-PROJ="pa-storage"
+PROJ="api-storage"
 
 if [[ -z "${HOST_ENV+x}" ]];then
   HOST_ENV="development"
