@@ -15,6 +15,6 @@ db.createCollection('users');
 db.createCollection('usertypes');
 db.createCollection('storages');
 
-db.items.createIndex( { name: 1, owner: 1, 'parentIds.0': 1, status: 1 }, { unique: true } );
+db.items.createIndex( { name: 1, owner: 1, 'parentIds.0': 1, status: 1, deletedAt: 1 }, { unique: true, sparse: true } );
 db.storages.createIndex( { name: 1, status: 1 }, { unique: true } );
 db.users.createIndex( { name: 1 }, { unique: true } );
