@@ -12,5 +12,9 @@ try {
 
 db.createCollection('items');
 db.createCollection('users');
-db.createCollection('user-types');
+db.createCollection('usertypes');
 db.createCollection('storages');
+
+db.items.createIndex( { name: 1, owner: 1, 'parentIds.0': 1, status: 1 }, { unique: true } );
+db.storages.createIndex( { name: 1, status: 1 }, { unique: true } );
+db.users.createIndex( { name: 1 }, { unique: true } );
